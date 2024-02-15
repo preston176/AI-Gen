@@ -23,8 +23,8 @@ const Header = () => {
     };
 
     return (
-        <div className="w-full sticky max-w-7xl border-b-2 border-[#101010]">
-            <div className="md:flex items-center justify-around py-4 md:px-10 px-8">
+        <div className="w-full max-w-7xl border-b-2 border-[#101010]">
+            <div className="md:flex items-center justify-between py-4 md:px-10 px-2">
                 {/* img */}
                 <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
                     <span className="text-primary text-black"><SocialIcon url='https://www.github.com' bgColor='none' fgColor='black' /></span>

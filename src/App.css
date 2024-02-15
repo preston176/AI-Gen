@@ -6,12 +6,13 @@
   display: block;
 }
 
+
 .each-slide-effect > div {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: contain;
-  height: 160px;
+  background-size: cover;
+  height: 400px;
 }
 
 .each-slide-effect span {

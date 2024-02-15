@@ -3,6 +3,8 @@ import './App.css';
 import Header from './Components/Header/Header';
 import Hero from './Components/Hero/Hero';
 import Mid from './Components/Mid/Mid';
+import TrustedBy from './Components/TrustedBy/TrustedBy';
+import Testimonial from './Components/Testimonial/Testimonial';
 
 const App = () => {
   return (
@@ -10,6 +12,8 @@ const App = () => {
       <Header />
       <Hero />
       <Mid />
+      <TrustedBy />
+      <Testimonial />
     </div>
   )
 }
