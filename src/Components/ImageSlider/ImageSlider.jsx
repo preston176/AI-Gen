@@ -33,7 +33,7 @@ const ImageSlider = () => {
 
                 {
                     images.map((image, index) => (
-                        <div key={index} className="each-slide-effect">
+                        <div key={index} className="each-slide-effect rounded-2xl">
                             <div style={{ 'backgroundImage': `url(${image})` }}>
                                 {/* <span>Slide {index + 1}</span> */}
                             </div>

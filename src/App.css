@@ -10,8 +10,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-size: cover;
-  height: 350px;
+  background-size: contain;
+  height: 160px;
 }
 
 .each-slide-effect span {
@@ -19,4 +19,13 @@
   font-size: 20px;
   background: #efefef;
   text-align: center;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
 }
