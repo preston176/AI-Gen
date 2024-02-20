@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
-import { Link, animateScroll as scroll } from 'react-scroll';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { SocialIcon } from 'react-social-icons';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const links = [
-
         { name: 'About', link: 'about' },
         { name: 'Pricing', link: 'projects' },
         { name: 'Login', link: 'contact' },
@@ -14,23 +13,19 @@ const Header = () => {
 
     const [open, setOpen] = useState(false);
 
-    useEffect(() => {
-        setOpen(false); // Close the mobile menu when the component mounts
-    }, []);
-
     const toggleMenu = () => {
         setOpen((prev) => !prev);
     };
 
     return (
-        <div className="w-full max-w-7xl border-b-2 border-[#101010]">
-            <div className="md:flex items-center justify-between py-4 md:px-10 px-2">
+        <div className="sticky top-0 left-0 w-full h-16 bg-[#e1f0ff] bg-opacity-85 border-b-2 border-[#101010] z-50 flex justify-center items-center ">
+            <div className="md:flex items-center justify-between py-4 md:px-10 px-2 w-full max-w-7xl">
                 {/* img */}
                 <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-                    <span className="text-primary text-black"><SocialIcon url='https://www.github.com' bgColor='none' fgColor='black' /></span>
+                    <span className="text-primary text-black"><SocialIcon url='https://www.github.com/preston176/AI-GEN' bgColor='none' fgColor='black' /></span>
                 </div>
                 <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-                    <span className="text-primary text-black">AI Image Generator</span>
+                    <Link to="/"> <span className="text-primary text-black">AI Gen</span></Link>
                 </div>
 
                 {/* md: mobile icons */}
@@ -43,7 +38,7 @@ const Header = () => {
 
                 {/* navbar */}
                 <ul
-                    className={`sticky md:flex md:items-center md:pd-0 md:static md:z-auto z-10 left-0 w-full md:w-auto mt-4 md:pl-0 pl-9 bg-slate-400 sm:bg-transparent transition-all duration-500 ease-in-out mobile-menu ${open ? 'open' : ''}`}
+                    className={`md:flex md:items-center md:pd-0 md:static md:z-auto left-0 w-full md:w-auto mt-4 md:pl-0 pl-9 bg-slate-400 sm:bg-transparent transition-all duration-500 ease-in-out mobile-menu ${open ? 'open' : ''}`}
                 >
                     {links.map((item, index) => (
                         <li key={index} className="md:ml-8 md:my-0 my:7 font-semibold">
