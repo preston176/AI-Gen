@@ -12,8 +12,6 @@ AI Gen is a project designed to harness the power of OpenAI to generate images, 
 
 ![Homepage](C:\Users\User\Desktop\projects\AI-Gen\demo2.png)
 
-
-
 ![pic](.\demo1.png)
 
 ## Getting Started
@@ -23,7 +21,7 @@ To get started with AI Gen, follow these steps:
 1. **Clone the Repository:**
 
    ```
-   git clone https://github.com/your-username/ai-gen.git
+   git clone https://github.com/preston176/ai-gen.git
    ```
 
 
@@ -36,18 +34,20 @@ npm install
 
 3. **Set Up Environment Variables:**
 - Obtain an API key from OpenAI and set it in your environment variables.
-- Refer to the `.env.example` file for the required variables.
-4. **Run the Application:**
-npm run dev
+- Refer to [OpenAI](https://platform.openai.com/api-keys) docs on procedure on how to get an API key.
+- Create a `.env` and include your API key with the same format as `.env.example`
 
+4. **Run the Application:**
+`npm run dev` or `npm start`
 
 ## Usage
 
 1. **Image Generation:**
 - Navigate to the image generation feature in the application.
+- Click on `Get Started`
 - Enter a description of the image you want to generate.
-- Click the "Generate" button to create the image using AI.
-- To save the generated image, click "Download"
+- Click the `Generate` button to create the image using AI.
+- To save the generated image, click `Download`
 
 ## Contributing
 
