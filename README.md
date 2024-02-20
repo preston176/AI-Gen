@@ -10,9 +10,8 @@ AI Gen is a project designed to harness the power of OpenAI to generate images, 
 
 ## Demo
 
-![Homepage](C:\Users\User\Desktop\projects\AI-Gen\demo2.png)
-
-![pic](.\demo1.png)
+![Homepage](demo2.png)
+![Generate Image](demo1.png)
 
 ## Getting Started
 
