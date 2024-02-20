@@ -31,7 +31,7 @@ const Mid = () => {
                             {card.icon}
                         </div>
                         <div className="">
-                            <h3 className="font-thin w-auto">{card.description}</h3>
+                            <h3 className="w-auto m-auto text-center">{card.description}</h3>
                         </div>
                     </div>
                 ))
