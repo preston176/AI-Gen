@@ -1,20 +1,20 @@
 import React from 'react';
 import './App.css';
-import Header from './Components/Header/Header';
-import Hero from './Components/Hero/Hero';
-import Mid from './Components/Mid/Mid';
-import TrustedBy from './Components/TrustedBy/TrustedBy';
-import Testimonial from './Components/Testimonial/Testimonial';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './Pages/HomePage';
+import ImageGen from './Pages/ImageGen';
 
 const App = () => {
   return (
-    <div className='mx-auto max-w-7xl'>
-      <Header />
-      <Hero />
-      <Mid />
-      <TrustedBy />
-      <Testimonial />
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/generate_image" element={<ImageGen />} />
+          <Route path="*" element={<h1>Not Found</h1>} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 
