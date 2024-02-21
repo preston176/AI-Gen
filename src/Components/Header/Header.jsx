@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { BookOpenIcon, Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { SocialIcon } from 'react-social-icons';
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '@emotion/react';
 
 const Header = () => {
     const links = [
@@ -12,20 +13,31 @@ const Header = () => {
     ];
 
     const [open, setOpen] = useState(false);
+    const { isDarkMode, toggleTheme } = useContext(ThemeContext);
 
     const toggleMenu = () => {
         setOpen((prev) => !prev);
     };
 
     return (
-        <div className="sticky top-0 left-0 w-full h-16 bg-[#e1f0ff] bg-opacity-85 border-b-2 border-[#101010] z-50 flex justify-center items-center ">
+        <div className={`sticky top-0 left-0 w-full h-16 ${isDarkMode ? 'bg-black text-white' : 'bg-[#e1f0ff] text-black'} bg-opacity-85 border-b-2 border-[#101010] z-50 flex justify-center items-center `}>
             <div className="md:flex items-center justify-between py-4 md:px-10 px-2 w-full max-w-7xl">
                 {/* img */}
                 <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-                    <span className="text-primary text-black"><SocialIcon url='https://www.github.com/preston176/AI-GEN' bgColor='none' fgColor='black' /></span>
+
+                    {/* Conditionally render a dark or light mode icon based on the value of
+                    `isDarkMode`. */}
+                    {isDarkMode ? <svg onClick={() => toggleTheme()} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                        <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+                    </svg>
+                        : <svg onClick={() => toggleTheme()} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
+                            <path d="M12 2.25a.75.75 0 0 1 .75.75v2.25a.75.75 0 0 1-1.5 0V3a.75.75 0 0 1 .75-.75ZM7.5 12a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM18.894 6.166a.75.75 0 0 0-1.06-1.06l-1.591 1.59a.75.75 0 1 0 1.06 1.061l1.591-1.59ZM21.75 12a.75.75 0 0 1-.75.75h-2.25a.75.75 0 0 1 0-1.5H21a.75.75 0 0 1 .75.75ZM17.834 18.894a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 1 0-1.061 1.06l1.59 1.591ZM12 18a.75.75 0 0 1 .75.75V21a.75.75 0 0 1-1.5 0v-2.25A.75.75 0 0 1 12 18ZM7.758 17.303a.75.75 0 0 0-1.061-1.06l-1.591 1.59a.75.75 0 0 0 1.06 1.061l1.591-1.59ZM6 12a.75.75 0 0 1-.75.75H3a.75.75 0 0 1 0-1.5h2.25A.75.75 0 0 1 6 12ZM6.697 7.757a.75.75 0 0 0 1.06-1.06l-1.59-1.591a.75.75 0 0 0-1.061 1.06l1.59 1.591Z" />
+                        </svg>
+                    }
+
                 </div>
                 <div className="font-bold text-2xl cursor-pointer flex items-center gap-1">
-                    <Link to="/"> <span className="text-primary text-black">AI Gen</span></Link>
+                    <Link to="/"> <span className={`${isDarkMode ? "text-white" : "text-black"} text-primary transition ease-in-out delay-150`}>AI Gen</span></Link>
                 </div>
 
                 {/* md: mobile icons */}
@@ -45,7 +57,7 @@ const Header = () => {
                             {item.link.startsWith('http') ? (
                                 <a
                                     href={item.link}
-                                    className="text-black transition-all duration-500 hover:text-primary"
+                                    className={`text-black transition-all duration-500 hover:text-primary ${isDarkMode ? 'text-white' : 'text-black'}`}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                 >
@@ -57,7 +69,7 @@ const Header = () => {
                                     activeClass="active"
                                     smooth={true}
                                     spy={true}
-                                    className="text-black transition-all duration-500 hover:text-primary"
+                                    className={`text-black transition-all duration-500 hover:text-primary ${isDarkMode ? 'text-white' : 'text-black'}`}
                                 >
                                     {item.name}
                                 </Link>

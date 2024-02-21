@@ -3,7 +3,14 @@
 @tailwind utilities;
 
 body {
-  background: #e1f0ff;
   margin: 0;
   font-family: "poppins", sans-serif;
+}
+
+.dark-mode {
+  background: #1a202c;
+}
+
+.light-mode {
+  background: #e1f0ff;
 }
