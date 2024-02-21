@@ -14,3 +14,35 @@ body {
 .light-mode {
   background: #e1f0ff;
 }
+
+/* scrollbar styles */
+body {
+  --sb-track-color: #e1f0ffc9;
+  --sb-thumb-color: linear-gradient(
+    180deg,
+    rgb(239, 68, 68),
+    rgb(59, 130, 246)
+  );
+  --sb-size: 15px;
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+  body {
+    scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+  }
+}
+/* end of scrollbar styles */
