@@ -14,7 +14,7 @@ export default function Footer() {
     return (
         <footer className={`w-full p-8 ${isDarkMode ? ThemeStyles.dark : ThemeStyles.light}`}>
             <div className={`flex flex-row flex-wrap items-center justify-center gap-y-6 gap-x-12 text-center md:justify-between ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                <SocialIcon url="https://twitter.com/ai_gen" bgColor="none" fgColor={isDarkMode ? "#ffffff" : "#111"} />
+                <SocialIcon url="https://www.github.com/preston176/ai-gen" bgColor="none" fgColor={isDarkMode ? "#ffffff" : "#111"} />
 
                 <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
                     <li>
@@ -41,7 +41,8 @@ export default function Footer() {
                     <li>
                         <Typography
                             as="a"
-                            href="#"
+                            href="https://preston176.vercel.app/"
+                            target="_blank"
                             color={isDarkMode ? 'white' : 'black'}
                             className="font-normal transition-colors hover:text-blue-500 focus:text-blue-500"
                         >
