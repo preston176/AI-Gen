@@ -8,8 +8,7 @@ const ThemeStyles = {
     light: 'bg-[#858585] shadow-gray-700 bg-opacity-10'
 }
 
-const Testimonial = () => {
-    const { isDarkMode } = useContext(ThemeContext);
+const Testimonial = ({ isDarkMode }) => {
     return (
         <section className={`py-12 bg-none sm:py-16 lg:py-20`}>
             <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">

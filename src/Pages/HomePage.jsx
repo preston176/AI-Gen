@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Hero from '../Components/Hero/Hero'
 import Mid from '../Components/Mid/Mid'
 import Testimonial from '../Components/Testimonial/Testimonial'
+import { ThemeContext } from '@emotion/react'
 
 const HomePage = () => {
+    const { isDarkMode } = useContext(ThemeContext);
     return (
 
         <>
-            <Hero />
-            <Mid />
-            <Testimonial />
+            <Hero isDarkMode={isDarkMode} />
+            <Mid isDarkMode={isDarkMode} />
+            <Testimonial isDarkMode={isDarkMode} />
         </>
 
     )

@@ -1,11 +1,9 @@
 import BoltIcon from '@mui/icons-material/Bolt';
 import PsychologyIcon from '@mui/icons-material/Psychology';
 import MonetizationOnIcon from '@mui/icons-material/MonetizationOn';
-import { ThemeContext } from '@emotion/react';
-import { useContext } from 'react';
 
-const Mid = () => {
-    const { isDarkMode } = useContext(ThemeContext);
+const Mid = ({ isDarkMode }) => {
+
 
 
     const ThemeStyles = {

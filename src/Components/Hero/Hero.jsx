@@ -2,10 +2,8 @@ import React, { useContext } from 'react'
 import ImageSlider from '../ImageSlider/ImageSlider'
 import defaultImage from '../../assets/defaultImage.jpg'
 import { Link } from 'react-router-dom'
-import { ThemeContext } from '@emotion/react'
 
-const Hero = () => {
-    const { isDarkMode } = useContext(ThemeContext);
+const Hero = ({ isDarkMode }) => {
 
 
     const ThemeStyles = {
