@@ -17,17 +17,17 @@ const Mid = ({ isDarkMode }) => {
         {
             icon: <BoltIcon fontSize='large' />,
             title: "Fast and Easy",
-            description: "Create stunning images in seconds.",
+            description: "Describe and create any content in seconds.",
         },
         {
             icon: <PsychologyIcon fontSize='large' />,
             title: "AI Powered",
-            description: "We use OpenAI's GPT-3 to generate images.",
+            description: "We use OpenAI's GPT to generate images.",
         },
         {
             icon: <MonetizationOnIcon fontSize='large' />,
             title: "Free to Use",
-            description: " Our tool is free to use and you can create unlimited images.",
+            description: " Our tool is free to use ... allowing you to create without limits.",
         },
     ]
 
