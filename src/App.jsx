@@ -23,7 +23,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/generate_image" element={<ImageGen />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
               <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
             <Footer />
