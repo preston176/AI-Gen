@@ -3,7 +3,7 @@ import defaultImage from '../../assets/defaultImage.jpg';
 import axios from 'axios';
 import './ImageGenerator.css';
 
-const ImageGenerator = () => {
+const ImageGenerator = ({ isDarkMode }) => {
     // ImageURL State
     const [imageURL, setImageURL] = useState('/');
     const inputReference = useRef(null);
@@ -51,7 +51,7 @@ const ImageGenerator = () => {
 
     return (
         <div className="flex flex-col items-center justify-center mt-8 mb-4 gap-4">
-            <div className="text-4xl font-medium pb-6">AI Image <span className="text-pink-500">Generator</span></div>
+            <div className={`${isDarkMode ? "text-white" : "text-black"} text-4xl font-medium pb-6`}>AI Image <span className="text-pink-500">Generator</span></div>
             <div className="flex flex-col">
                 <img className="min-w-[200px] h-auto rounded-md max-w-[300px]" src={imageURL === "/" ? defaultImage : imageURL} alt="generated-image" />
                 <div className="loading">
@@ -59,7 +59,7 @@ const ImageGenerator = () => {
                     <div className={loading ? "loading-text" : "display-none"}>Loading ...</div>
                 </div>
             </div>
-            <div className="flex flex-col w-full max-w-screen-md items-center justify-center bg-gray-900 p-4 rounded-md">
+            <div className={`${isDarkMode ? "bg-gray-700" : "bg-gray-900"} flex flex-col w-full max-w-screen-md items-center justify-center  p-4 rounded-md`}>
                 <input ref={inputReference} type="text" placeholder="Describe what you would like to see" className="w-full h-12 bg-transparent border-none outline-none text-white placeholder-white text-lg px-4 mr-2" />
             </div>
             {/* buttons container */}

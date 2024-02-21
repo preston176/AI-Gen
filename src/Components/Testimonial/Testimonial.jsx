@@ -21,7 +21,15 @@ const Testimonial = () => {
                     </div>
 
                     <div className="mt-8 text-center md:mt-16 md:order-3 ">
-                        <a href="#" title="" className="pb-2 text-base font-bold leading-7 text-gray-900 transition-all duration-200 border-b-2 border-gray-900 hover:border-gray-600 font-pj focus:outline-none focus:ring-1 focus:ring-gray-900 focus:ring-offset-2 hover:text-gray-600"> Check all 2,157 reviews </a>
+                        <a
+                            href="#"
+                            title=""
+                            className={`pb-2 text-base font-bold leading-7 ${isDarkMode ? 'text-gray-300 border-gray-300 hover:border-gray-400 hover:text-gray-400 focus:ring-gray-300 focus:ring-offset-gray-900' : 'text-gray-900 border-gray-900 hover:border-gray-600 hover:text-gray-600 focus:ring-gray-900 focus:ring-offset-2'
+                                } transition-all duration-200 border-b-2 ${isDarkMode ? 'border-gray-300' : 'border-gray-900'
+                                } font-pj focus:outline-none focus:ring-1 focus:ring-offset-2 focus:ring-gray-900`}
+                        >
+                            Check all 2,157 reviews
+                        </a>
                     </div>
 
                     <div className=" relative mt-10 md:mt-24 md:order-2 ">
