@@ -8,8 +8,7 @@ import { ThemeContext } from '@emotion/react';
 const Header = () => {
     const links = [
         { name: 'About', link: 'about' },
-        { name: 'Pricing', link: 'projects' },
-        { name: 'Login', link: 'contact' },
+        { name: 'Generate Image', link: 'generate_image' },
     ];
 
     const [open, setOpen] = useState(false);
