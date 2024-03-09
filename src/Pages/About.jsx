@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Audio, ThreeDots } from 'react-loader-spinner';
+import { ThreeDots } from 'react-loader-spinner';
 import OpenAI from "openai";
 
 const About = ({ isDarkMode }) => {
