@@ -17,7 +17,7 @@ const Mid = ({ isDarkMode }) => {
         {
             icon: <BoltIcon fontSize='large' />,
             title: "Fast and Easy",
-            description: "Describe and create any content in seconds.",
+            description: "No ads ... No Privacy Risks",
         },
         {
             icon: <PsychologyIcon fontSize='large' />,
