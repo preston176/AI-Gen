@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react';
 import defaultImage from '../../assets/defaultImage.jpg';
 import axios from 'axios';
 import './ImageGenerator.css';
+import Swal from 'sweetalert2';
 
 const ImageGenerator = ({ isDarkMode }) => {
     // ImageURL State
@@ -33,7 +34,12 @@ const ImageGenerator = ({ isDarkMode }) => {
             setLoading(false)
         } catch (error) {
             console.error('Error generating image:', error.response.data);
-            alert('Failed to generate image. Please try again later.');
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: "Failed to generate image. Please try again later.",
+            });
+            // alert('Failed to generate image. Please try again later.');
         }
     };
 

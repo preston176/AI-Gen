@@ -7,7 +7,6 @@ const Header = () => {
     const links = [
         { name: 'About', link: 'about' },
         { name: 'Services', link: 'services' },
-        { name: 'Generate Image', link: 'generate_image' },
     ];
 
     const [open, setOpen] = useState(false);

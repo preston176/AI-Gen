@@ -30,7 +30,7 @@ const Hero = ({ isDarkMode }) => {
 
                 <div className="">
 
-                    <Link to="/generate_image">  <h3 className={`${isDarkMode ? ThemeStyles.darkBtn : ThemeStyles.lightBtn}' hover:scale-105 transition ease-in-out delay-50 hover:transition-all`}>Get Started</h3></Link>
+                    <Link to="/services">  <h3 className={`${isDarkMode ? ThemeStyles.darkBtn : ThemeStyles.lightBtn}' hover:scale-105 transition ease-in-out delay-50 hover:transition-all`}>Get Started</h3></Link>
 
                 </div>
             </div>

@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer';
 import About from './Pages/About';
 import { ThemeContext } from '@emotion/react';
 import AiServices from './Pages/AiServices';
+import SpeechToText from './Pages/SpeechToText';
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
@@ -26,6 +27,8 @@ const App = () => {
               <Route path="/generate_image" element={<ImageGen />} />
               <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
               <Route path="/services" element={<AiServices isDarkMode={isDarkMode} />} />
+              <Route path="/services/generate_image" element={<ImageGen isDarkMode={isDarkMode} />} />
+              <Route path="/services/speech_to_text" element={<SpeechToText isDarkMode={isDarkMode} />} />
               <Route path="*" element={<h1>Not Found</h1>} />
             </Routes>
             <Footer />
