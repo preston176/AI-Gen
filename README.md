@@ -4,8 +4,9 @@ AI Gen is a project designed to harness the power of OpenAI to generate images, 
 
 ## Features
 
-- **AI Image Generation:** Generate images using state-of-the-art AI models provided by OpenAI.
-- **Speech To Text:** Dynamically convert real-time audio speech to text.
+- **AI Image Generation:** Generate images using advanced AI models provided by OpenAI.
+- **Speech To Text:** Convert real-time audio speech into text dynamically.
+- **Text Summarization:** Summarize large amounts of text into a concise summary.
 
 - *More features to be added in the future.* - Audio Generation, Text-to-speech, user Auth, Dark Mode / Light mode
 
