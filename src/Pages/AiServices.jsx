@@ -31,6 +31,7 @@ const AiServices = ({ isDarkMode }) => {
             icon: <ArticleIcon fontSize='large' />,
             title: "Summarization",
             description: "Summarize long documents, articles, or reports into concise overviews.",
+            link: '/services/summarize'
         },
     ]
     //TODO: To be implemented
