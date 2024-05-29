@@ -7,11 +7,14 @@ import Header from './Components/Header/Header';
 import Footer from './Components/Footer/Footer';
 import About from './Pages/About';
 import { ThemeContext } from '@emotion/react';
+import { AuthContext } from './Context/AuthContext';
 import AiServices from './Pages/AiServices';
 import SpeechToText from './Pages/SpeechToText';
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(true);
+  // auth state
+  const [currentUser, setCurrentUser] = useState(null);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
@@ -21,17 +24,23 @@ const App = () => {
       <BrowserRouter>
         <div className='mx-auto max-w-7xl'>
           <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
-            <Header />
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/generate_image" element={<ImageGen />} />
-              <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
-              <Route path="/services" element={<AiServices isDarkMode={isDarkMode} />} />
-              <Route path="/services/generate_image" element={<ImageGen isDarkMode={isDarkMode} />} />
-              <Route path="/services/speech_to_text" element={<SpeechToText isDarkMode={isDarkMode} />} />
-              <Route path="*" element={<h1>Not Found</h1>} />
-            </Routes>
-            <Footer />
+            <AuthContext.Provider value={{ currentUser, setCurrentUser }}>
+              <Header />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/generate_image" element={<ImageGen />} />
+                <Route path="/about" element={<About isDarkMode={isDarkMode} />} />
+                <Route path="/services" element={<AiServices isDarkMode={isDarkMode} />} />
+                <Route path="/services/generate_image" element={<ImageGen isDarkMode={isDarkMode} />} />
+                <Route path="/services/speech_to_text" element={<SpeechToText isDarkMode={isDarkMode} />} />
+                <Route path="*" element={<h1>Not Found</h1>} />
+                {/* auth routes */}
+                {
+                  currentUser && <Route to="/signup" element="Signup" />
+                }
+              </Routes>
+              <Footer />
+            </AuthContext.Provider>
           </ThemeContext.Provider>
         </div>
       </BrowserRouter>

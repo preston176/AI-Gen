@@ -2,8 +2,10 @@ import React, { useState, useContext } from 'react';
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid';
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '@emotion/react';
+import { AuthContext } from '../../Context/AuthContext';
 
 const Header = () => {
+    const { currentUser, setCurrentUser } = useContext(AuthContext);
     const links = [
         { name: 'About', link: 'about' },
         { name: 'Services', link: 'services' },
