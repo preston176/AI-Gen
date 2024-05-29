@@ -18,7 +18,7 @@ const App = () => {
     setIsDarkMode(!isDarkMode);
   };
   return (
-    <div className={isDarkMode ? "dark-mode" : "light-mode"}>
+    <div className={`${isDarkMode ? "dark-mode" : "light-mode"} min-h-[100vh]`} >
       <BrowserRouter>
         <div className='mx-auto max-w-7xl'>
           <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
