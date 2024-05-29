@@ -39,6 +39,8 @@ const ImageGenerator = ({ isDarkMode }) => {
                 title: 'Oops...',
                 text: "Failed to generate image. Please try again later.",
             });
+            setLoading(false)
+            setImageURL(defaultImage)
             // alert('Failed to generate image. Please try again later.');
         }
     };
