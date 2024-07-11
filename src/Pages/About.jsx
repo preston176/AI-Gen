@@ -29,7 +29,7 @@ const About = ({ isDarkMode }) => {
         <div className={`${isDarkMode ? "text-white" : "text-black"} text-gray-900`}>
             <h2 className='text-center font-bold text-2xl py-2'>About</h2>
             <p className={`${isDarkMode ? "text-white" : "text-black"} font-bold text-center text-lg`}>Welcome to this AI Gen Project! </p>
-            <p className='text-lg text-center py-2'>We are passionate about harnessing the power of AI to create innovative solutions for generating images, audio, and more. <br /> Our project leverages cutting-edge technology provided by OpenAI to enable users to explore the realm of artificial intelligence in creative ways.</p>
+            <p className='text-lg text-center py-2'>We are passionate about harnessing the power of AI to create innovative solutions for delivering a vast majority of services such as generating images, audio, and more. <br /> Our project leverages cutting-edge technology provided by OpenAI to enable users to explore the realm of artificial intelligence in creative ways.</p>
             <div className="models-used">
                 <h3 className="text-xl font-semibold mb-4 text-center">Models used:</h3>
                 {

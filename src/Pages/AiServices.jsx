@@ -11,7 +11,9 @@ const AiServices = ({ isDarkMode }) => {
         dark: "bg-[#111] shadow-gray-700",
         darkText: 'text-white',
         lightText: 'text-black',
-        light: 'bg-[#858585] shadow-gray-700 bg-opacity-10'
+        light: 'bg-[#858585] shadow-gray-700 bg-opacity-10',
+        darkBtn: 'bg-red-50 text-black p-4 rounded hover:bg-red-500 hover:text-white',
+        lightBtn: 'bg-red-500 text-white p-4 rounded hover:bg-red-400 hover:text-black',
     }
 
     const cards = [
@@ -62,7 +64,7 @@ const AiServices = ({ isDarkMode }) => {
             <div className='flex rounded-[3000px] items-center justify-between pt-8 py-4  sm:flex-row mobile:flex-col mobile:gap-5 '>
                 {
                     cards.map((card, index) => (
-                        <Link to={card.link}>
+                        <Link to={card.link} key={index}>
                             <div key={index} className={`${isDarkMode ? ThemeStyles.dark : ThemeStyles.light} flex flex-col justify-around items-center h-60 rounded-xl mobile:w-screen md:w-[320px] lg:w-[400px] hover:scale-110 hover:cursor-pointer transition-all ease-in-out duration-150`}>
                                 <h2 className="bg-gradient-to-r from-red-500 to-blue-500 text-transparent bg-clip-text laptop:text-[40px] font-mono p-4 md:text-[76px] sm:text-[46px] mobile:text-[28px] small_mobile:text-[25px] text-center">{card.title}</h2>
                                 <div className={`${isDarkMode ? ThemeStyles.darkText : ThemeStyles.lightText} flex justify-center items-center scale-[2]`}>
@@ -70,6 +72,9 @@ const AiServices = ({ isDarkMode }) => {
                                 </div>
                                 <div className="">
                                     <h3 className={`${isDarkMode ? ThemeStyles.darkText : ThemeStyles.lightText} w-auto m-auto text-center`}>{card.description}</h3>
+                                </div>
+                                <div className="">
+                                    <Link to={card.link}>  <h3 className={`${isDarkMode ? ThemeStyles.darkBtn : ThemeStyles.lightBtn}' hover:scale-105 transition ease-in-out delay-50 hover:transition-all`}>Get Started</h3></Link>
                                 </div>
                             </div>
                         </Link>
