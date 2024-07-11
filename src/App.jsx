@@ -12,7 +12,8 @@ import SpeechToText from './Pages/SpeechToText';
 import Summarize from './Pages/Summarize';
 
 const App = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  // by default : darkMode Enabled
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
